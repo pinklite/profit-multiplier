@@ -1,0 +1,50 @@
+Instructions To Setting Up Exponential Profit 
+Multiplier 
+Thank you for ordering a resale rights license to The "Exponential Profit 
+Multiplier". 
+You are welcome to use the included website to resell this product as it is, however keep in mind that there 
+are other resellers offering this same product! 
+To make your website stand out consider re-working the sales letter or have your own custom graphics 
+created to make your site unique. 
+Getting Started
+To re-brand the "Exponential Profit Multiplier" website open it in an HTML editor and change the bolded 
+purple text that says "your name" to what ever your name actually is, and change the text color from 
+purple back to black. 
+If you do not have an HTML editor you can get a free one by going to this link : 
+http://www.nvu.com/index.php
+Also be sure to add your support email address or a link to your help desk if you have one to the download 
+pages. 
+Be sure you edit all of the bolded purple text, leaving any of this text as it is will give your new website an 
+amateurish look, so be sure you do not miss any of the pink editing text! 
+Important: Do not forget to hook up the download and purchase buttons to your payment processor on 
+the index.html page and then have your payment processor return your buyers to the proper thank you 
+pages. 
+Change yourdomain to what ever your domain name actually is for your website. 
+IMPORTANT:
+Leave all the files and page names as they are so the site and all the downloads will work properly. 
+Upload all files & folders to your website as follows
+images
+index.html - this file requires editing. 
+expm.zip
+Upload the expm.zip file as is, your customer will be able to edit their new site just as you are now with no 
+problems. There is no need for you to make any changes to this zip file before you upload it. 
+I have included the ready to go software file, and have also included the full website as your rights allow 
+you to claim yourself as the author, you can now resell the script, or resell the rights.. Anything goes! Installing The Exponential Profit Multiplier Script 
+Unzip all the files in expm.zip into a folder in your PC 
+Upload all the files in this folder to your server 
+Using your favorite FTP software set permission to:
+• /Script_Directory_folder/ -777 
+• setup.php - 777 
+• setup.tpl.php - 777 
+• installer.php - 777 
+Run your browser to http://www.yourdomain.com/expm_directory/installer.php
+Once you have completed the installation you may delete installer.php for security reasons. 
+To match your existing website open up recepm.php in your favorite HTML editor to customize according 
+to your needs. 
+Running Exponential Profit Multiplier 
+To let your visitors start referring their friends to your website, make a link to: 
+http://www.yourdomain.com/expm_directory/recepm.php
+Sit back, relax and enjoy the torrential influx of viral traffic to your website!
+ 
+Reseller Resources Reseller Resources 
+ 
