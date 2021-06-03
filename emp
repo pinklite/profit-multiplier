@@ -1,0 +1,63 @@
+<?php
+include_once("setup.php");
+
+if ($v)
+{
+$refurl1 = $mydomain.$myvma."?v=$v";
+}
+elseif (!$v)
+{
+$refurl1 = $mywebsite;
+}
+
+$refurl2 = $mydomain.$myvma."?v=$referrer";
+
+if (($f1email == $email) || ($f2email == $email) || eregi("\@$mydomain", $email) || eregi("\@$mydomain", $f1email) || eregi("\@$mydomain", $f2email) || (!$agree))
+{
+?>
+<h1 align="center">Oops!</h1>
+<h3 align="center">Sorry, you either MISSED out certain field(s), or attempted 
+to CHEAT the system (please don't do that again, you'll be forgiven this time).</h3>
+<h3 align="center">Please click the "Back" button on your web browser and try 
+  again.</h3>
+<?php
+}
+elseif (($name) && ($email) && ($f1name) && ($f1email) && ($f2name) && ($f2email) && ($referrer) && ($f1email != $email) && ($f2email != $email) && ($agree == 1))
+{
+$headers = "Content-Type: text/plain; charset=us-ascii\nFrom: $name <$email>\nReply-To: <$email>\nReturn-Path: <$email>\nX-Mailer: PHP";
+$subject1 = "Hi $f1name, $name here.. $subject";
+$message1 = "Hi $f1name!
+
+It's me, $name.
+".$message.$refurl1."
+
+Best Regards,
+$name,
+$email";
+mail($f1email,$subject1,$message1,$headers);
+$subject2 = "Hi $f2name, $name here.. $subject";
+$message2 = "Hi $f2name!
+
+It's me, $name.
+".$message.$refurl2."
+
+Best Regards,
+$name,
+$email";
+mail($f2email,$subject2,$message2,$headers);
+$thankyouheaders = "Content-Type: text/plain; charset=us-ascii\nFrom: $myname <$myemail>\nReply-To: <$myemail>\nReturn-Path: <$myemail>\nX-Mailer: PHP";
+$thankyousubject = "Thanks, $name, for referring your 2 friends!";
+$thankyoumessage = "Hi $name!
+
+$thankumessage
+$refurl2
+
+Best Regards,
+$myname,
+$myemail";
+mail($email,$thankyousubject,$thankyoumessage,$thankyouheaders);
+setcookie("name","$name",time()+315360000,"/",".$mydomain",0);
+setcookie("email","$email",time()+315360000,"/",".$mydomain",0);
+header("Location:$thankyou");
+}
+?>
